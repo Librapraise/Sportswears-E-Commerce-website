@@ -1,0 +1,62 @@
+
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+nav{
+    flex: 1;
+    text-align: right;
+}
+nav ul{ 
+    display: inline-block;
+    list-style: none;
+}
+nav ul li{
+    display: inline-block;
+    margin-right: 20px;
+}
+nav a{
+    text-decoration: none;
+    color: #555;
+}
+p{
+    color: #555;
+}
+
+.menu-icon{
+    margin-left: 20px;
+    width: 28px;
+    display: none;
+    cursor: pointer;
+}
+
+
+/*----media query for menu-----------*/
+
+@media only screen and (max-width: 770px){
+
+    .menu-icon{
+        display: block;
+    }
+    
+    nav ul{
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background: #333;
+        width: 100%;
+        overflow: hidden;
+        transition:  0.5s;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 10px 50px 10px 0;
+    }
+    
+    nav ul li a{
+        color: #fff;
+    }
+}
