@@ -33,7 +33,9 @@
                 <img src="./images/menu.png" class="menu-icon" onclick="menuToggle()">
             </div>
     
-    
+            <div class="footer-arrow" id="footer-arrow">
+                <img src="./arrow.png" >
+            </div>
         </div>
     </header>
 
@@ -152,10 +154,11 @@
     
                 <hr>
                 <p class="copyright">Copyright 2022 - Libra Design</p>
+
+                
             </div>
         </div>
     </footer>
-
 
 
 <!------js for toggle menu------>
@@ -173,6 +176,17 @@
             menuItems.style.maxHeight = '0px'
         }
     }
+
+
+    const arrowUp = document.getElementById('footer-arrow');
+
+    arrowUp.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: "smooth"
+        })
+    })
 </script>
 </body>
 </html>

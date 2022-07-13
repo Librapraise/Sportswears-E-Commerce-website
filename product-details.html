@@ -32,8 +32,10 @@
                 <a href="./cart.html"><img src="./images/cart.png" width="30px" height="30px"></a>
                 <img src="./images/menu.png" class="menu-icon" onclick="menuToggle()">
             </div>
-    
-    
+            
+            <div class="footer-arrow" id="footer-arrow">
+                <img src="./arrow.png" >
+            </div>
         </div>
     </header>
 
@@ -214,6 +216,7 @@
     
                 <hr>
                 <p class="copyright">Copyright 2022 - Libra Design</p>
+
             </div>
         </div>
     </footer>
@@ -251,6 +254,18 @@
             checkSize = a;
         })
     })
+
+    //scrolling to the top of the page
+    const arrowUp = document.getElementById('footer-arrow');
+
+    arrowUp.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: "smooth"
+        })
+    })
+
 </script>
 
 
@@ -264,7 +279,7 @@
     function menuToggle(){
 
         if(menuItems.style.maxHeight == '0px'){
-            menuItems.style.maxHeight = '200px'
+            menuItems.style.maxHeight = '150px'
         }else{
             menuItems.style.maxHeight = '0px'
         }
